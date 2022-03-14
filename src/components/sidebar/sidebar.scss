@@ -30,6 +30,11 @@
     color: var(--txt-color);
   }
 
+  &__active {
+    border-right: 5px solid var(--main-color);
+    border-radius: 2px;
+  }
+
   &__container {
     padding: 1rem 0;
     display: flex;
@@ -51,10 +56,24 @@
 }
 
 .sidebar {
-  &__logoContainer {
-  }
   &__items {
     margin-top: 5rem;
   }
-  
+  &__upgrade {
+    background-color: var(--second-bg);
+    margin-right: 3rem;
+    padding: 1rem;
+  }
+  &__title {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--main-color);
+  }
+  &__paragraph {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--main-color);
+  }
 }

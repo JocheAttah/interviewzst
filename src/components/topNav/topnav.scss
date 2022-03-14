@@ -1,0 +1,17 @@
+.topnav {
+  width: 100%;
+  background-color: var(--bg-white);
+  border-radius: 2rem;
+
+  &__input {
+    width: 100%;
+    padding: 3rem 3rem;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+
+    &::-webkit-input-placeholder {
+      color: var(--txt-light);
+    }
+  }
+}

@@ -6,20 +6,20 @@
   --txt-color: #171c34;
   --txt-white: #fff;
   --txt-light: #9197a6;
+  --bg-white: #fff;
 
   --main-color: #2e1cc4;
   --second-color: #e5e2fc;
   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
-  --acc-color-purple: #3B2F9B;
-  --second-color-purple: #EFEDFF;
+  --acc-color-purple: #3b2f9b;
+  --second-color-purple: #efedff;
 
-  --acc-color-green: #5AB35A;
-  --second-color-green: #EBF9EA;
-  
-  --acc-color-gold: #8E6E16;
-  --second-color-gold: #FAF1D8;
+  --acc-color-green: #5ab35a;
+  --second-color-green: #ebf9ea;
 
+  --acc-color-gold: #8e6e16;
+  --second-color-gold: #faf1d8;
 
   --sidebar-width: 300px;
   --border-radius: 15px;
@@ -32,7 +32,7 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
-html{
+html {
   font-size: 62.5%;
 }
 body {
@@ -70,4 +70,3 @@ input {
 input:focus {
   border: 2px solid var(--main-color);
 }
-
