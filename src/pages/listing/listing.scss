@@ -57,4 +57,62 @@
     height: 100%;
     border-radius: 0.5rem;
   }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 2rem;
+  }
+  &__topContent {
+  }
+  &__bottomContent {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+  &__titleContainer {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    font-size: 1.8rem;
+  }
+  &__rating {
+    margin-left: 1rem;
+  }
+  &__addressContainer {
+    display: flex;
+    color: var(--txt-light);
+    font-size: 1.2rem;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  &__address {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+
+  &__itemContainer {
+    display: flex;
+    align-items: center;
+  }
+  &__iconContainer {
+    font-size: 2rem;
+    color: var(--txt-light);
+  }
+  &__textContainer {
+    margin-left: 1rem;
+  }
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--txt-light);
+  }
+  &__value{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--txt-color);
+  }
 }

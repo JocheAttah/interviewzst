@@ -2,8 +2,11 @@ import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./listing.scss";
-
+import { GoLocation, GoMegaphone } from "react-icons/go";
+import { AiOutlineThunderbolt } from "react-icons/ai";
+import { BsDoorOpen } from "react-icons/bs";
 import { listingData } from "../../assets/data/jsonData";
+import Star from "../../assets/svg/Star";
 
 const ListItem = (props) => (
   <div className="list__container">
@@ -14,14 +17,48 @@ const ListItem = (props) => (
       <div className="list__topContent">
         <div className="list__titleContainer">
           <h3 className="list__title">{props.title}</h3>
-          {/* {props.rating.map(())} */}
+          <div className="list__rating">
+            {[...Array(props.rating).keys()].map((item) => (
+              <span>
+                <Star />
+              </span>
+            ))}
+          </div>
         </div>
         <div className="list__addressContainer">
-          {/* icon */}
+          <GoLocation />
           <p className="list__address">{props.address}</p>
         </div>
       </div>
-      <div className="list__bottomContent">//continue here</div>
+      <div className="list__bottomContent">
+        <div className="list__itemContainer">
+          <div className="list__iconContainer">
+            <BsDoorOpen />
+          </div>
+          <div className="list__textContainer">
+            <div className="list__label">Door</div>
+            <div className="list__value">{props.door}</div>
+          </div>
+        </div>
+        <div className="list__itemContainer">
+          <div className="list__iconContainer">
+            <AiOutlineThunderbolt />
+          </div>
+          <div className="list__textContainer">
+            <div className="list__label">Avg. energy usage</div>
+            <div className="list__value">{props.aeu}kWh</div>
+          </div>
+        </div>
+        <div className="list__itemContainer">
+          <div className="list__iconContainer">
+            <GoMegaphone />
+          </div>
+          <div className="list__textContainer">
+            <div className="list__label">Noise level</div>
+            <div className="list__value">{props.noise}dB</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 );
@@ -45,9 +82,9 @@ const Listing = () => {
                   title={item.title}
                   rating={item.rating}
                   address={item.address}
-                  noise={item.noise}
+                  noise={item.noise_level}
                   aeu={item.avg_enegy_usage}
-                  doors={item.door}
+                  door={item.door}
                 />
               ))}
             </TabPanel>
