@@ -4,6 +4,7 @@ import { BsLaptop } from "react-icons/bs";
 import { HiOutlineUsers } from "react-icons/hi";
 import { CgScreen } from "react-icons/cg";
 import { FiSettings } from "react-icons/fi";
+import { image1, image2, image3 } from "../images";
 
 const sidebarData = [
   {
@@ -47,7 +48,7 @@ const sidebarData = [
 const listingData = [
   {
     id: 1,
-    image: "",
+    image: image1,
     title: "1312 Richmond",
     rating: 4,
     address: "Richmond Place 1312,Charlotte, New York",
@@ -57,7 +58,7 @@ const listingData = [
   },
   {
     id: 2,
-    image: "",
+    image: image2,
     title: "6 Fremont Street",
     rating: 5,
     address: "6 Fremont Street, Loyalton state, Boston",
@@ -67,7 +68,7 @@ const listingData = [
   },
   {
     id: 3,
-    image: "",
+    image: image3,
     title: "83 Vista  Street",
     rating: 3,
     address: "83 Vista  Street, Encinitas, Washington",
@@ -77,4 +78,4 @@ const listingData = [
   },
 ];
 
-export { sidebarData };
+export { sidebarData, listingData };
