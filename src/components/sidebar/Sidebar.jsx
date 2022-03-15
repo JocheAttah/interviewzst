@@ -16,9 +16,21 @@ const RabbuLogo = () => (
 
 const SidebarItem = ({ icon, title, link }) => {
   return (
-    <div className={`item item__container `}>
-      <div className="item__iconContainer">{icon}</div>
-      <Link to={link} className="item__title">
+    <div
+      className={`item item__container ${
+        title === "Listings" ? "item__active" : ""
+      }`}
+    >
+      <div
+        className={`item__iconContainer ${
+          title === "Listings" ? "item__activeIcon" : ""
+        }`}
+      >
+        {icon}
+      </div>
+      <Link to={link} className={`item__title ${
+          title === "Listings" ? "item__activeText" : ""
+      }`}>
         {title}
       </Link>
     </div>

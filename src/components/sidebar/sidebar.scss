@@ -18,6 +18,10 @@
 
 .item {
   margin-bottom: 2.5rem;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
   &:hover {
     border-right: 5px solid var(--main-color);
     border-radius: 2px;
@@ -47,11 +51,17 @@
     color: var(--txt-light);
   }
 
+  &__activeIcon {
+    color: var(--main-color);
+  }
   &__title {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--txt-light);
     margin-left: 2rem;
+  }
+  &__activeText {
+    color: var(--txt-color);
   }
 }
 
@@ -77,8 +87,7 @@
     color: var(--main-color);
   }
   &__buttonContainer {
-   display:flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
   }
-  
 }
