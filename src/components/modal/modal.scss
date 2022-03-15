@@ -27,6 +27,8 @@
     flex: 1;
   }
   &__bottomContent {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
     border-top: 1px solid #e1e4ed;
   }
   &__navContainer {
@@ -95,5 +97,37 @@
     display: flex;
     align-items: center;
   }
- 
+
+  &__contentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__planContainer {
+    display: flex;
+    align-items: center;
+  }
+  &__iconContainer {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 2rem;
+    background-color: var(--second-color-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--acc-color-purple);
+    font-size: 1.6rem;
+  }
+  &__planTextContainer{
+      margin-left: 1rem;
+  }
+  &__planHeader{
+      font-size: 1.4rem;
+      color:var(--txt-color);
+  }
+  &__planText{
+      font-size: 1rem;
+      color:var(--txt-light);
+  }
+
 }

@@ -1,7 +1,8 @@
 import React from "react";
 import "./modal.scss";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { GoLocation, GoPrimitiveDot } from "react-icons/go";
+import { GoLocation, GoPrimitiveDot,GoRocket } from "react-icons/go";
+
 
 const Modal = () => {
   return (
@@ -9,7 +10,7 @@ const Modal = () => {
       <div className="modal__content">
         <TopContent />
         <div className="modal__main">Main</div>
-        <div className="modal__bottomContent">Bootom</div>
+        <BottomContent />
       </div>
     </div>
   );
@@ -17,7 +18,7 @@ const Modal = () => {
 
 export default Modal;
 
-function TopContent({}) {
+function TopContent() {
   return (
     <div className="modal__topContent">
       <div className="modal__navContainer">
@@ -53,3 +54,21 @@ function TopContent({}) {
     </div>
   );
 }
+
+
+const BottomContent = () => (
+    <div className="modal__bottomContent">
+        <div className="modal__contentContainer">
+            <div className="modal__planContainer">
+                <div className="modal__iconContainer">
+                    <GoRocket />
+                </div>
+                <div className="modal__planTextContainer">
+                    <h4 className="modal__planHeader">Free plan</h4>
+                    <p className="modal__planText">$50 billed monthly</p>
+                </div>
+            </div>
+            <div>Button</div>
+        </div>
+    </div>
+)
