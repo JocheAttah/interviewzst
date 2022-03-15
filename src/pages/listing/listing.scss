@@ -47,6 +47,14 @@
     background-color: var(--bg-white);
     margin-bottom: 2rem;
     border-radius: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid var(--main-color);
+      box-shadow: -4px 2px 27px -8px rgba(46, 28, 196, 0.75);
+      -webkit-box-shadow: -4px 2px 27px -8px rgba(46, 28, 196, 0.75);
+      -moz-box-shadow: -4px 2px 27px -8px rgba(46, 28, 196, 0.75);
+    }
   }
   &__imageContainer {
     width: 12rem;
@@ -108,7 +116,7 @@
     font-weight: 700;
     color: var(--txt-light);
   }
-  &__value{
+  &__value {
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--txt-color);
