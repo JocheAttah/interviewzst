@@ -3,6 +3,8 @@ import Logo from "../../assets/svg/logo";
 import { sidebarData } from "../../assets/data/jsonData";
 import { Link } from "react-router-dom";
 import "./sidebar.scss";
+import Button from "../button/Button";
+
 const RabbuLogo = () => (
   <div className="logo">
     <div className="logo__container">
@@ -12,7 +14,7 @@ const RabbuLogo = () => (
   </div>
 );
 
-const SidebarItem = ({ icon, title, link}) => {
+const SidebarItem = ({ icon, title, link }) => {
   return (
     <div className={`item item__container`}>
       <div className="item__iconContainer">{icon}</div>
@@ -50,6 +52,9 @@ const Sidebar = () => {
           <p className="sidebar__paragraph">
             Make the most out of Rabbu with Pro.
           </p>
+          <div className="sidebar__buttonContainer">
+            <Button name="Upgrade" />
+          </div>
         </div>
       </div>
     </>

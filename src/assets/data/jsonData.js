@@ -78,4 +78,8 @@ const listingData = [
   },
 ];
 
-export { sidebarData, listingData };
+const accessCode = [5, 7, 6, 2];
+const ownerCode = [1,8,5,9];
+const cleanerCode = [4,5,6,7];
+
+export { sidebarData, listingData, accessCode, ownerCode, cleanerCode};

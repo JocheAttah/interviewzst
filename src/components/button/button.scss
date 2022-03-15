@@ -1,0 +1,15 @@
+.button {
+  padding: 1rem 2.2rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  border: 0;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+
+  &__container {
+    background-color: var(--main-color);
+    color: var(--txt-white);
+  }
+}
