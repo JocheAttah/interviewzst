@@ -1,0 +1,99 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+
+  &__content {
+    width: 25%;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 2rem 0 0 2rem;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__topContent {
+    border-bottom: 1px solid #e1e4ed;
+    padding-bottom: 2rem;
+  }
+  &__main {
+    flex: 1;
+  }
+  &__bottomContent {
+    border-top: 1px solid #e1e4ed;
+  }
+  &__navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+  }
+  &__navs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__navIconContainer {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #e1e4ed;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--txt-light);
+    &__right {
+      margin-left: 0.5rem;
+    }
+  }
+  &__navLabel {
+    margin-left: 0.5rem;
+    color: var(--txt-light);
+    font-weight: 700;
+  }
+  &__escContainer {
+    display: flex;
+    align-items: center;
+  }
+  &__titleContainer {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    font-size: 2.4rem;
+  }
+  &__addressContainer {
+    display: flex;
+    color: var(--txt-light);
+    font-size: 1.2rem;
+    align-items: center;
+    padding: 0.25rem 0;
+  }
+  &__address {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    font-weight: 700;
+  }
+  &__activeContainer {
+    margin-left: 0.5rem;
+    background-color: var(--second-color-green);
+    border-radius: 2rem;
+  }
+  &__active {
+    padding: 0.5rem 1.5rem;
+    color: var(--acc-color-green);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+ 
+}

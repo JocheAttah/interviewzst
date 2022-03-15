@@ -7,6 +7,7 @@ import { AiOutlineThunderbolt } from "react-icons/ai";
 import { BsDoorOpen } from "react-icons/bs";
 import { listingData } from "../../assets/data/jsonData";
 import Star from "../../assets/svg/Star";
+import { Modal } from "../../components";
 
 const ListItem = (props) => (
   <div className="list__container">
@@ -66,6 +67,7 @@ const ListItem = (props) => (
 const Listing = () => {
   return (
     <div className="listing">
+      <Modal />
       <div className="listing__header">
         <h3 className="listing__headerText">Listings</h3>
         <Tabs className="listing__tabs">

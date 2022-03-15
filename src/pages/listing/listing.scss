@@ -64,8 +64,6 @@
     flex: 1;
     margin-left: 2rem;
   }
-  &__topContent {
-  }
   &__bottomContent {
     display: flex;
     width: 50%;
@@ -86,7 +84,7 @@
     color: var(--txt-light);
     font-size: 1.2rem;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 0.25rem 0;
   }
   &__address {
     font-size: 1.2rem;
