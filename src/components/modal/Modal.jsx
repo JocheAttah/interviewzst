@@ -8,10 +8,27 @@ import Button from "../button/Button";
 import { Person } from "../../assets/images";
 import { accessCode, ownerCode, cleanerCode } from "../../assets/data/jsonData";
 
-const Modal = () => {
+const Modal = ({ show, onClose }) => {
+  if (!show) {
+    return null;
+  }
+
+  // const escKeyClose = (e) => {
+  //   if ((e.charCode || e.keyCode) === 27) {
+  //     onClose();
+  //   }
+  // };
+
+  // React.useEffect(() => {
+  //   document.body.addEventListener("keydown", escKeyClose);
+  //   return function cleanup() {
+  //     document.body.removeEventListener("keydown", escKeyClose);
+  //   };
+  // }, []);
+
   return (
-    <div className="modal">
-      <div className="modal__content">
+    <div className="modal" onClick={onClose}>
+      <div className="modal__content" onClick={(e) => e.stopPropagation()}>
         <TopContent />
         <Main />
         <BottomContent />
@@ -128,7 +145,7 @@ const Main = () => (
               <div className="modal__codetitle">Cleaner code</div>
               <div className="modal__codeCards">
                 {cleanerCode.map((item) => (
-                  <Card  number={item} />
+                  <Card number={item} />
                 ))}
               </div>
             </div>
@@ -159,6 +176,6 @@ const Card = ({ number, color }) => (
     }
     ${color === "purple" ? " card__container__purple" : ""}`}
   >
-    <p>{number}</p>
+    <p className="card__number">{number}</p>
   </div>
 );

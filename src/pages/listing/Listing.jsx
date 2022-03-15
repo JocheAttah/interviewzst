@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./listing.scss";
@@ -9,65 +9,73 @@ import { listingData } from "../../assets/data/jsonData";
 import Star from "../../assets/svg/Star";
 import { Modal } from "../../components";
 
-const ListItem = (props) => (
-  <div className="list__container">
-    <div className="list__imageContainer">
-      <img src={props.image} alt="listing" className="list__image" />
-    </div>
-    <div className="list__content">
-      <div className="list__topContent">
-        <div className="list__titleContainer">
-          <h3 className="list__title">{props.title}</h3>
-          <div className="list__rating">
-            {[...Array(props.rating).keys()].map((item) => (
-              <span>
-                <Star />
-              </span>
-            ))}
+const ListItem = (props) => {
+  const [show, setShow] = useState(false);
+
+  const handleShowModal = () => (
+    setShow(true)
+  )
+
+  return (
+    <div className="list__container" onClick={handleShowModal}>
+      <Modal show={show}  onClose={()=>setShow(false)}/>
+      <div className="list__imageContainer">
+        <img src={props.image} alt="listing" className="list__image" />
+      </div>
+      <div className="list__content">
+        <div className="list__topContent">
+          <div className="list__titleContainer">
+            <h3 className="list__title">{props.title}</h3>
+            <div className="list__rating">
+              {[...Array(props.rating).keys()].map((item) => (
+                <span>
+                  <Star />
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="list__addressContainer">
+            <GoLocation />
+            <p className="list__address">{props.address}</p>
           </div>
         </div>
-        <div className="list__addressContainer">
-          <GoLocation />
-          <p className="list__address">{props.address}</p>
+        <div className="list__bottomContent">
+          <div className="list__itemContainer">
+            <div className="list__iconContainer">
+              <BsDoorOpen />
+            </div>
+            <div className="list__textContainer">
+              <div className="list__label">Door</div>
+              <div className="list__value">{props.door}</div>
+            </div>
+          </div>
+          <div className="list__itemContainer">
+            <div className="list__iconContainer">
+              <AiOutlineThunderbolt />
+            </div>
+            <div className="list__textContainer">
+              <div className="list__label">Avg. energy usage</div>
+              <div className="list__value">{props.aeu}kWh</div>
+            </div>
+          </div>
+          <div className="list__itemContainer">
+            <div className="list__iconContainer">
+              <GoMegaphone />
+            </div>
+            <div className="list__textContainer">
+              <div className="list__label">Noise level</div>
+              <div className="list__value">{props.noise}dB</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="list__bottomContent">
-        <div className="list__itemContainer">
-          <div className="list__iconContainer">
-            <BsDoorOpen />
-          </div>
-          <div className="list__textContainer">
-            <div className="list__label">Door</div>
-            <div className="list__value">{props.door}</div>
-          </div>
-        </div>
-        <div className="list__itemContainer">
-          <div className="list__iconContainer">
-            <AiOutlineThunderbolt />
-          </div>
-          <div className="list__textContainer">
-            <div className="list__label">Avg. energy usage</div>
-            <div className="list__value">{props.aeu}kWh</div>
-          </div>
-        </div>
-        <div className="list__itemContainer">
-          <div className="list__iconContainer">
-            <GoMegaphone />
-          </div>
-          <div className="list__textContainer">
-            <div className="list__label">Noise level</div>
-            <div className="list__value">{props.noise}dB</div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Listing = () => {
   return (
     <div className="listing">
-      <Modal />
       <div className="listing__header">
         <h3 className="listing__headerText">Listings</h3>
         <Tabs className="listing__tabs">
@@ -87,6 +95,7 @@ const Listing = () => {
                   noise={item.noise_level}
                   aeu={item.avg_enegy_usage}
                   door={item.door}
+                  onclick={onclick}
                 />
               ))}
             </TabPanel>

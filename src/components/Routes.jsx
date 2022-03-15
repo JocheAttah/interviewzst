@@ -5,7 +5,7 @@ import { Dashboard, Listing } from "../pages";
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/listing" component={Listing} />
+      <Route path="/listing" exact component={Listing} />
       <Route path="/dashboard" exact component={Dashboard} />
     </Switch>
   );
