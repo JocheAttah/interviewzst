@@ -16,7 +16,7 @@ const RabbuLogo = () => (
 
 const SidebarItem = ({ icon, title, link }) => {
   return (
-    <div className={`item item__container`}>
+    <div className={`item item__container `}>
       <div className="item__iconContainer">{icon}</div>
       <Link to={link} className="item__title">
         {title}
